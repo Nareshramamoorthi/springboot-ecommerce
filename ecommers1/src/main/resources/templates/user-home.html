@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Home - Products</title>
+    <link rel="stylesheet" th:href="@{/css/user-home.css}">
+</head>
+<body>
+
+<header>
+    <h1>E-Shop 🛒</h1>
+    <div class="header-actions">
+        <span>Welcome 👋</span>
+        <form th:action="@{/logout}" method="post" style="display:inline;">
+            <button type="submit" class="logout-btn">Logout</button>
+        </form>
+    </div>
+</header>
+
+
+
+<div class="container">
+
+    <!-- Sidebar: Price Filter -->
+    <aside class="sidebar">
+        <h3>Filter by Price</h3>
+        <ul>
+            <li><a th:href="@{/user/home(min=0,max=1000)}">₹0 – ₹1000</a></li>
+            <li><a th:href="@{/user/home(min=1000,max=2000)}">₹1000 – ₹2000</a></li>
+            <li><a th:href="@{/user/home(min=2000,max=5000)}">₹2000 – ₹5000</a></li>
+            <li><a th:href="@{/user/home(min=5000)}">₹5000+</a></li>
+            <li><a th:href="@{/user/home}">Clear Filter</a></li>
+        </ul>
+    </aside>
+
+    <!-- Product Grid -->
+    <main class="products">
+        <div class="card" th:each="p : ${products}">
+            <div class="img-container">
+                <img th:src="@{/images/{file}(file=${p.imagelink})}" alt="Product Image">
+                <span class="badge"
+                      th:text="${p.stock > 0 ? 'In Stock' : 'Out of Stock'}"
+                      th:classappend="${p.stock > 0} ? '' : ' out-stock'">
+                </span>
+            </div>
+            <h4 th:text="${p.name}"></h4>
+            <p class="price" th:text="'₹ ' + ${p.price}"></p>
+            <a th:href="@{'/user/product/' + ${p.productId}}" class="btn btn-primary">View Details</a>
+        </div>
+    </main>
+
+</div>
+
+<footer>
+    <p>&copy; 2025 E-Shop | All rights reserved.</p>
+</footer>
+
+</body>
+</html>

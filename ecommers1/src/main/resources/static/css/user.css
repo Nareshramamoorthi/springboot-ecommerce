@@ -1,0 +1,32 @@
+/* user.css */
+body {
+    font-family: Arial, sans-serif;
+    background: #e8f5e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    color: #43a047;
+    margin-bottom: 30px;
+}
+
+a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #43a047;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: #2e7d32;
+}

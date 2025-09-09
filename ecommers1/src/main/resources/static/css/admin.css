@@ -1,0 +1,186 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: #1e3a8a;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #ffdd57;
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Sections */
+section {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+section:hover {
+    transform: translateY(-2px);
+}
+
+h2 {
+    color: #1e3a8a;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 5px;
+}
+
+/* Forms */
+form input, form textarea, form button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #1e3a8a;
+    outline: none;
+    box-shadow: 0 0 5px rgba(30,58,138,0.2);
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+form button {
+    background: #1e3a8a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #152a6a;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+table th {
+    background: #e2e8f0;
+    color: #1e3a8a;
+    font-weight: 600;
+}
+
+table tr:hover {
+    background: #f1f5f9;
+}
+
+table img {
+    border-radius: 6px;
+    max-height: 60px;
+}
+
+/* Footer */
+footer {
+    background: #1e3a8a;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media(max-width: 992px) {
+    header nav a {
+        display: block;
+        margin: 8px 0;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+@media(max-width: 576px) {
+    section {
+        padding: 15px;
+    }
+
+    form input, form textarea, form button {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    color: #ffdd57;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 2px 5px; /* super small */
+    font-size: 0.85rem; /* smaller text */
+}
+.logout-btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+
